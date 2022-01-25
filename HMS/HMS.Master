@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HMS.master.cs" Inherits="HMS.HMS" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+     <style> 
+        body {background-image:url(HMS.png);
+        background-size:100% 100%;
+        background-attachment:fixed;
+        background-repeat:no-repeat;
+        
+        }
+   </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <div id="header">
+            <h1>Hospital Management System</h1>
+     <hr />
+         
+         <ul><li><a href="Login.aspx">Login</a></li></ul>
+         <ul><li><a href="Registration.aspx">Patient Registration</a></li></ul>
+         <ul><li><a href="Administration.aspx">Administration</a></li></ul>
+         <ul><li><a href="AdminLogin.aspx">AdminLogin</a></li></ul>
+         
+         
+     </div>
+        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
