@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Admin Registration</title>
+    
      <style> 
         body {background-image:url(HMS.png);
         background-size:100% 100%;

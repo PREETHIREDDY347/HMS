@@ -5,7 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Hospital Management System</title>
-    <h1>Administration</h1>
+     <link rel="stylesheet" href="StyleSheet.css" />
+
+    <style>
+        .tablestyle1{background-color:grey;
+                     font-family:'Lucida Console';
+        }
+        #txtDoctorID{background-color:aqua}
+    </style>
+    <h1>Administration </h1>
     <style> 
         body {background-image:url(HMS.png);
         background-size:100% 100%;
@@ -14,11 +22,38 @@
         
         }
    </style>
+     <script type="text/javascript">
+         function validate()
+         {
+             flag = false;
+             var DoctorId = document.getElementById("<%=txtDoctorID.ClientID%>").value;
+             var DoctorName = document.getElementById("<%=txtDoctorName.ClientID%>").value;
+             var Specialization = document.getElementById("<%=txtSpecialization.ClientID%>").value;
+             var Qualification = document.getElementById("<%=txtQualification.ClientID%>").value;
+             var Fee = document.getElementById("<%=txtConsultFee.ClientID%>").value;
+             if (DoctorId == '')
+                 alert('Mention Doctor Id ,Field can not be empty')
+            else if (DoctorName == '')
+                 alert('should not be empty');
+             else if (Specialization == '')
+                 alert('Cannot be empty');
+
+            else if (Qualification == '')
+                 alert('Qualification cannot be empty');
+             else if (Fee == '')
+                 alert('Mention fee');
+             else
+                 flag = true;
+             return flag;
+             
+         }
+     </script>
+    
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <table>
+            <table class="tablestyle3">
                 <tr> 
                     <td> <asp:Label ID="Label1" runat="server" Text="Doctor ID"></asp:Label></td>
                     <td><asp:TextBox ID="txtDoctorID" runat="server"></asp:TextBox></td>
@@ -46,7 +81,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Save" OnClick="btnSave_Click" />
+                        <asp:Button ID="Button1" runat="server" Text="Save" OnClientClick="return validate()" OnClick="btnSave_Click" />
                         <asp:Button ID="Button2" runat="server" Text="Edit" OnClick="btnEdit_Click"/>
                         <asp:Button ID="Button3" runat="server" Text="Update" OnClick="btnUpdate_Click"/>
                         <asp:Button ID="Button4" runat="server" Text="Delete" OnClick="btnDelete_Click"/>
@@ -62,5 +97,6 @@
 
         </div>
     </form>
-</body>
+   
+    </body>
 </html>

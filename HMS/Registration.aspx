@@ -79,5 +79,6 @@
             <asp:GridView ID="gvPatientInfo" runat="server"></asp:GridView>
         </div>
     </form>
+
 </body>
 </html>

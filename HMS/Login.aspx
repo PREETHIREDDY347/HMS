@@ -5,11 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Hospital Mangement System</title>
+    <link rel="stylesheet" href="StyleSheet.css" />
     <style> 
         body {background-image:url(HMS.png);
         background-size:100% 100%;
         background-attachment:fixed;
         background-repeat:no-repeat;
+        
         
         }
    </style>
